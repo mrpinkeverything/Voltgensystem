@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard - Voltgen Electric Systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="admin-bg">
+  <header class="site-header admin-header">
+    <div class="header-content">
+      <img src="/existing website/VoltGen/your-logo.jpg" alt="Voltgen Logo" class="logo">
+      <span class="site-title">Voltgen Electric Systems - Admin</span>
+      <nav class="main-nav">
+        <a href="/admin/dashboard">Dashboard</a>
+        <a href="/admin/logout">Logout</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1>Admin Dashboard</h1>
+    <section class="admin-section">
+      <h2>Add Blog Post</h2>
+      <form method="POST" action="/admin/add-blog" enctype="multipart/form-data">
+        <label>Title: <input type="text" name="title" required></label><br>
+        <label>Author: <input type="text" name="author" required></label><br>
+        <label>Image: <input type="file" name="image" accept="image/*"></label><br>
+        <label>Content:<br><textarea name="content" required></textarea></label><br>
+        <button type="submit">Add Post</button>
+      </form>
+    </section>
+    <section class="admin-section">
+      <h2>Existing Blog Posts</h2>
+      <ul>
+        <% blog.forEach(function(post, idx) { %>
+          <li class="admin-blog-item">
+            <strong><%= post.title %></strong> <em>(<%= new Date(post.date).toLocaleDateString() %>)</em><br>
+            <span>By <%= post.author %></span><br>
+            <% if (post.image) { %>
+              <img src="<%= post.image %>" alt="Blog Image" style="max-width:120px;max-height:80px;display:block;margin:0.5em 0;">
+            <% } %>
+            <%= post.content %>
+            <form method="POST" action="/admin/delete-blog" style="display:inline">
+              <input type="hidden" name="index" value="<%= idx %>">
+              <button type="submit">Delete</button>
+            </form>
+          </li>
+        <% }); %>
+      </ul>
+    </section>
+  </main>
+  <footer class="site-footer admin-footer">
+    &copy; <%= new Date().getFullYear() %> Voltgen Electric Systems. Admin Panel.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login - Voltgen Electric Systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="admin-bg">
+  <header class="site-header admin-header">
+    <div class="header-content">
+      <img src="/existing website/VoltGen/your-logo.jpg" alt="Voltgen Logo" class="logo">
+      <span class="site-title">Voltgen Electric Systems - Admin</span>
+    </div>
+  </header>
+  <main>
+    <h1>Admin Login</h1>
+    <% if (error) { %><p style="color:red"><%= error %></p><% } %>
+    <form method="POST" action="/admin/login">
+      <label>Username: <input type="text" name="username" required></label><br>
+      <label>Password: <input type="password" name="password" required></label><br>
+      <button type="submit">Login</button>
+    </form>
+  </main>
+  <footer class="site-footer admin-footer">
+    &copy; <%= new Date().getFullYear() %> Voltgen Electric Systems. Admin Panel.
+  </footer>
+</body>
+</html>

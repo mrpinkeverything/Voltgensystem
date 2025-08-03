@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voltgen Electric Systems</title>
+  <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap">-->
+  <link rel="stylesheet" href="/welcome.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <img src="/existing website/VoltGen/your-logo.jpg" alt="Voltgen Logo" class="logo">
+      <span class="site-title">Voltgen Electric Systems</span>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact/About</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home" style="background: url('/existing website/VoltGen/agriculture.jpg') center/cover no-repeat; color: white; padding: 5rem 2rem; text-align: center;">
+    <h1><b> <span class="blurry-background"> Voltgen Electric Systems </span></b></h1>
+    <p>Innovative solar solutions for commercial and industrial applications.</p>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Get a Quote</button>
+  </section>
+
+  <section class="section stats">
+    <div><h3>50+</h3><p>Projects Completed</p></div>
+    <div><h3>5 kW – 1 MW</h3><p>System Capacities</p></div>
+    <div><h3>100 MWh</h3><p>Solar Energy Generated Daily</p></div>
+    <div><h3>20 MWh</h3><p>Battery Storage</p></div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Voltgen</h2>
+    <p>Founded in 2019, Voltgen Electric Systems Pty Ltd is a dynamic player in the renewable energy sector. Led by three directors with a Class One Electrical Engineering certification and degrees in Mechatronics and Fuels & Energy, we bring deep expertise to every project.</p>
+    <p>We provide tailored solar solutions for commercial and industrial applications, ranging from 5 kW to 1 MW in capacity.</p>
+  </section>
+
+  <section class="section sectors">
+    <h2>Sectors We Serve</h2>
+    <div class="stats">
+      <div><img src="/existing website/VoltGen/residential.jpg" alt="residential"><p>Residential</p></div>
+      <div><img src="/existing website/VoltGen/industrial.jpg" alt="Industrial"><p>Industrial</p></div>
+      <div><img src="/existing website/VoltGen/agriculture.jpg" alt="Agriculture"><p>Agricultural</p></div>
+      <div><img src="/existing website/VoltGen/victron.jpg" alt="Victron"><p>Victron Systems</p></div>
+      <div><img src="/existing website/VoltGen/sunsynk.jpg" alt="Sunsynk"><p>Sunsynk</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div><h3>Design & Installation</h3><p>Custom solar systems tailored to client needs.</p></div>
+      <div><h3>Battery-Based Solutions</h3><p>Reliable energy storage for continuity.</p></div>
+      <div><h3>Photovoltaic Installations</h3><p>High-efficiency PV systems for peak output.</p></div>
+      <div><h3>Maintenance & Support</h3><p>System monitoring and professional maintenance.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <h2>Our Projects</h2>
+    <div class="projects-grid">
+      <div><img src="/existing website/VoltGen/project1.jpg" alt="Project 1"><p>5kW Residential</p></div>
+      <div><img src="/existing website/VoltGen/project2.jpg" alt="Project 2"><p>100kW Industrial</p></div>
+      <div><img src="/existing website/VoltGen/IMG-20250413-WA0133.jpg" alt="Project 3"><p>1MW Commercial</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Your Phone Number" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; <%= new Date().getFullYear() %> Voltgen Electric Systems. All rights reserved.</p>
+  </footer>
+</body>
+</html>

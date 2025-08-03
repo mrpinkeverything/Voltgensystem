@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog - Voltgen Electric Systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <img src="/existing website/VoltGen/your-logo.jpg" alt="Voltgen Logo" class="logo">
+      <span class="site-title">Voltgen Electric Systems</span>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact/About</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1>Blog: Common Solar Problems & Solutions</h1>
+    <% if (blog.length === 0) { %>
+      <p>No blog posts yet.</p>
+    <% } else { %>
+      <ul>
+        <% blog.forEach(function(post) { %>
+          <li>
+            <strong><%= post.title %></strong> <em>(<%= new Date(post.date).toLocaleDateString() %>)</em><br>
+            <span>By <%= post.author %></span><br>
+            <% if (post.image) { %>
+              <img src="<%= post.image %>" alt="Blog Image" style="max-width:220px;max-height:140px;display:block;margin:0.5em 0;">
+            <% } %>
+            <%= post.content %>
+          </li>
+        <% }); %>
+      </ul>
+    <% } %>
+  </main>
+  <footer class="site-footer">
+    &copy; <%= new Date().getFullYear() %> Voltgen Electric Systems. All rights reserved.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voltgen Electric Systems</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Open Sans', sans-serif; color: #333; }
+    header, footer { background: #0a3d62; color: white; padding: 1rem 2rem; }
+    header nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    header img { height: 50px; }
+    .hero { background: url('agriculture.jpg') center/cover no-repeat; color: white; padding: 5rem 2rem; text-align: center; }
+    .hero h1 { font-size: 3rem; font-family: 'Montserrat', sans-serif; color: #0a3d62;}
+    .hero p { font-size: 1.2rem; margin: 1rem 0; }
+    .btn { background: #1dd1a1; color: white; padding: 0.8rem 1.5rem; border: none; cursor: pointer; font-weight: bold; }
+    .section { padding: 4rem 2rem; max-width: 1200px; margin: auto; }
+    .stats, .sectors, .services-grid, .projects-grid { display: grid; grid-gap: 2rem; }
+    .stats { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center; }
+    .stats div { background: #f1f2f6; padding: 1rem; border-radius: 10px; }
+    .sectors img, .projects-grid img { width: 100%; border-radius: 10px; }
+    .services-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .services-grid div { background: #f1f2f6; padding: 1rem; border-radius: 10px; }
+    h2 { font-family: 'Montserrat', sans-serif; margin-bottom: 1rem; color: #0a3d62; }
+    form { display: flex; flex-direction: column; }
+    input, textarea { margin-bottom: 1rem; padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px; }
+    button { background: #1dd1a1; color: white; border: none; padding: 1rem; font-weight: bold; cursor: pointer; border-radius: 5px; }
+    footer p { text-align: center; }
+    span.blurry-background {
+   --bgcolor: rgba(256,256,256,50%);
+   background-color: var(--bgcolor);
+   box-shadow: 0 0 8px 8px var(--bgcolor);
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <img src="your-logo.jpg" alt="Voltgen Logo">
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <h1><b> <span class="blurry-background"> Voltgen Electric Systems </span></b></h1>
+    <p>Innovative solar solutions for commercial and industrial applications.</p>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Get a Quote</button>
+  </section>
+
+  <section class="section stats">
+    <div><h3>50+</h3><p>Projects Completed</p></div>
+    <div><h3>5 kW – 1 MW</h3><p>System Capacities</p></div>
+    <div><h3>100 MWh</h3><p>Solar Energy Generated Daily</p></div>
+    <div><h3>20 MWh</h3><p>Battery Storage</p></div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Voltgen</h2>
+    <p>Founded in 2019, Voltgen Electric Systems Pty Ltd is a dynamic player in the renewable energy sector. Led by three directors with a Class One Electrical Engineering certification and degrees in Mechatronics and Fuels & Energy, we bring deep expertise to every project.</p>
+    <p>We provide tailored solar solutions for commercial and industrial applications, ranging from 5 kW to 1 MW in capacity.</p>
+  </section>
+
+  <section class="section sectors">
+    <h2>Sectors We Serve</h2>
+    <div class="stats">
+      <div><img src="residential.jpg" alt="residential"><p>Residential</p></div>
+      <div><img src="industrial.jpg" alt="Industrial"><p>Industrial</p></div>
+      <div><img src="agriculture.jpg" alt="Agriculture"><p>Agricultural</p></div>
+      <div><img src="victron.jpg" alt="Victron"><p>Victron Systems</p></div>
+      <div><img src="sunsynk.jpg" alt="Sunsynk"><p>Sunsynk</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div><h3>Design & Installation</h3><p>Custom solar systems tailored to client needs.</p></div>
+      <div><h3>Battery-Based Solutions</h3><p>Reliable energy storage for continuity.</p></div>
+      <div><h3>Photovoltaic Installations</h3><p>High-efficiency PV systems for peak output.</p></div>
+      <div><h3>Maintenance & Support</h3><p>System monitoring and professional maintenance.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <h2>Our Projects</h2>
+    <div class="projects-grid">
+      <div><img src="project1.jpg" alt="Project 1"><p>5kW Residential</p></div>
+      <div><img src="project2.jpg" alt="Project 2"><p>100kW Industrial</p></div>
+      <div><img src="project3.jpg" alt="Project 3"><p>1MW Commercial</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Your Phone Number" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Voltgen Electric Systems. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
